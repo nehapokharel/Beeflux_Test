@@ -1,0 +1,269 @@
+﻿Q1. 
+Create a function to sum Input Numbers (parameters) which returns sum of inputed numbers. Also write Unittest for the function.
+
+my_sum(1,2)    should return 3 e.g.
+my_sum(1,2,3) should return 6
+my_sum(1,3,5,7,8) = ?
+
+
+Q2.
+Consider a dictionary
+d = {1:1, 2:2, 3:3}
+a. whats the value of d[4] ??
+b. How can you set 9 value in 2 key.
+Write a program to print value with 2 key.
+
+Q3.
+Consider a function
+
+def student(name, roll, age, address):
+    print(name, roll, age, address)
+
+
+
+a. What would be output of followings
+    student(“pratima”, name=”pratima”, 20, 20, 20)
+    student(“pratima”, 20, age=25, “kathmandu”)
+   student(“pratima”)
+   
+
+Q4.
+Whats the difference between tuple and list.
+
+Consider a list
+l = [1,2,3,4,5,6,7,8,9]
+
+how can you get last 4 items in l
+
+Q5.
+
+consider a function
+
+def aappend(item , lst):
+    return lst.append(item)
+
+a = aappend(1, [])
+print(a)
+
+b = aappend(2, a)
+print(b)
+
+c = aappend(3, [])
+print(c)
+
+
+Q6.
+
+def aappend(item , lst=[]):
+    lst = []
+    return lst.append(item)
+
+a = aappend(1, [])
+print(a)
+
+b = aappend(2, a)
+print(b)
+
+c = aappend(3, [])
+print(c)
+
+
+
+
+Q7.
+
+def aappend(item , lst):
+    lst = []
+    lst.append(item)
+    return lst
+
+a = aappend(1, [])
+print(a)
+
+b = aappend(2, a)
+print(b)
+
+c = aappend(3, [])
+print(c)
+
+Q8.
+
+def aappend(item , lst):
+    lst.append(item)
+    return lst
+
+a = aappend(1, [])
+print(a)
+
+b = aappend(2, a)
+print(b)
+
+c = aappend(3, [])
+print(c)
+
+
+Also give reason to all prints in aapend functions. (till Q 8)
+
+
+
+Q9.
+
+
+class Dog:
+
+    kind = 'canine'         
+
+    def __init__(self, name):
+        self.name = name    # instance variable unique to each instance
+
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+
+What Is the output of 
+d.kind
+
+d.type
+
+e.kind
+e.type
+
+Q10.
+
+d.kind=”white”
+d.name=”john”
+e.name=”jonny”
+
+what will be output of 
+
+d.kind
+e.kind
+d.type
+e.type
+
+Q11.
+
+Create a Iteratr class for givng numbers up to given input values.
+
+
+e.g. b = IteratorBee(10), returns same.
+
+Create a generator function factors to give factors of input.
+def factors(n):
+    ………………….
+
+
+Q12.
+
+Write a program to create a flie name bee.txt write “hello bee to it”
+
+write another program to read the contents of bee.txt in uppercase.
+
+Q13.
+
+Write a function to give squareroot of a value if it is int or float, raise an exception otherwise.
+def sqt(x):
+……….
+
+Q14.
+Write a short program that takes as input three integers, a, b, and c, from the console and determines if they can be used in a correct arithmetic formula (in the given order), like “a+b = c,” “a = b−c,” or “a ∗ b = c.”
+
+
+Q15
+The p-norm of a vector v = (v1,v2,...,vn) in n-dimensional space is de- fined as v = p v p 1 +v p 2 +···+v p n . For the special case of p = 2, this results in the traditional Euclidean norm, which represents the length of the vector. For example, the Euclidean norm of a two-dimensional vector with coordinates (4,3) has a Euclidean norm of √ 42 +32 = √16+9 = √ 25 = 5. Give an implementation of a function named norm such that norm(v, p) returns the p-norm value of v and norm(v) returns the Euclidean norm of v. You may assume that v is a list of numbers.
+
+Q16.
+The birthday paradox says that the probability that two people in a room will have the same birthday is more than half, provided n, the number of people in the room, is more than 23. This property is not really a paradox, but many people find it surprising. Design a Python program that can test this paradox by a series of experiments on randomly generated birthdays, which test this paradox for n = 5,10,15,20,...,100
+
+
+Q17
+Class CreditCard :
+ Fields:  balance limit  customer account  bank
+Behaviors: make payment(amount) get customer( ) get bank( ) get account( ), get balance( ) get limit( ) charge(price)
+
+Implement Class for CreditCard and document it
+
+
+Create class PredatoryCreditCard
+fields: apr (annual percentage rate)
+behavoours : charge(price)
+
+
+Q18
+Create a class Building 
+Create Appartment, House  and Commercial Building class inheriting Building class.
+
+Q19
+class Progression: 
+2 ”””Iterator producing a generic progression. 
+3 
+4 Default iterator produces the whole numbers 0, 1, 2, ... 
+5 ””” 
+6 
+7 def init (self, start=0): 
+8 ”””Initialize current to the first value of the progression.””” 
+9 self. current = start 
+10 
+11 def advance(self): 
+12 ”””Update self. current to a new value. 
+13 
+14 This should be overridden by a subclass to customize progression. 
+15 
+16 By convention, if current is set to None, this designates the 
+17 end of a finite progression. 
+18 ””” 
+19 self. current += 1 
+20 
+21 def next (self): 
+22 ”””Return the next element, or else raise StopIteration error.””” 
+23 if self. current is None: # our convention to end a progression 
+24 raise StopIteration( ) 
+25 else: 
+26 answer = self. current # record current value to return 
+27 self. advance( ) # advance to prepare for next time 
+28 return answer # return the answer 
+29 
+30 def iter (self): 
+31 ”””By convention, an iterator must return itself as an iterator.””” 
+32 return self 
+33 
+34 def print progression(self, n)
+35 ”””Print next n values of the progression.””” 
+36 print( .join(str(next(self)) for j in range(n)))
+
+a. Create implementation of an ArithmeticProgression class, which relies on Progression as its base class. The constructor for this new class accepts both an increment value and a starting value as parameters, although default values for each are provided. By our convention, ArithmeticProgression(4) produces the sequence 0,4,
+
+b.
+Implementation of geometric progression, in which each value is produced by multiplying the preceding value by a fixed constant, known as the base of the geometric progression. The starting point of a geometric progression is traditionally 1, rather than 0, because multiplying 0 by any factor results in 0. As an example, a geometric progression with base 2 proceeds as 1,2,4,8,16,... .
+
+c.
+Implement
+class FibonacciProgression(Progression): 
+”””Iterator producing a generalized Fibonacci progression.”””
+
+For example, if we start with values 4 and 6, the series proceeds as 4,6,10,16,26,42,.
+
+
+if name == __main__ :
+ print( ‘Default progression: ‘) 
+Progression( ).print progression(10)
+
+print(‘Arithmetic progression with increment 5: ‘) 
+ArithmeticProgression(5).print progression(10)
+
+print( ‘Arithmetic progression with increment 5 and start 2: ‘)
+ ArithmeticProgression(5, 2).print progression(10) 
+
+print( ‘Geometric progression with default base: ‘) 
+GeometricProgression( ).print progression(10) 
+
+print( ‘Geometric progression with base 3: ‘) 
+GeometricProgression(3).print progression(10) 
+
+print( ‘Fibonacci progression with default start values: ‘)
+ FibonacciProgression( ).print progression(10) 
+
+print( ‘Fibonacci progression with start values 4 and 6: ‘)
+ FibonacciProgression(4, 6).print progression(10)
+
+
+ALL THE BEST.
